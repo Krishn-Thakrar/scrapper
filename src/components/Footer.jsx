@@ -9,7 +9,6 @@ function Footer(){
                 <p>
                     HotelDekho.com<br />
                     Find the hotel that best suits for you....
-                    Here Only
                 </p>
         </div>
         </>
