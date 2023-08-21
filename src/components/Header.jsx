@@ -27,14 +27,14 @@ function Header(){
                     </div>
                 </div>
                 <div style={{display: "flex", columnGap: "10px", marginRight: "30px"}}>
-                    {!authContext.user.id && (
+                    {!authContext.user && (
                         <>
-                            <Button variant="text" color="secondary" onClick={() => {navigate("/")}}>Login</Button>
-                            <Button variant="text" color="secondary" onClick={() => {navigate("/register")}}>Register</Button>
+                            <Button variant="contained" onClick={() => {navigate("/")}} style={{width: "100px", height: "50px", marginTop: "15px"}}>Login</Button>
+                            <Button variant="contained" onClick={() => {navigate("/register")}} style={{width: "100px", height: "50px", marginTop: "15px"}}>Register</Button>
                         </>
                     )}
-                    {!!authContext.user.id ? (
-                        <Button variant="contained" color="secondary" onClick={() => { logOut(); }} style={{width: "100px", height: "50px", marginTop: "15px"}}>LogOut</Button>
+                    {!!authContext.user ? (
+                        <Button variant="contained" onClick={() => { logOut(); }} style={{width: "100px", height: "50px", marginTop: "15px"}}>LogOut</Button>
                     ) : null}
                 </div>
             </div>

@@ -28,7 +28,7 @@ function Login(){
     const onSubmit = (values) => {
         authService.login(values).then((values)=>{
             // console.log(values.data.msg);
-            // authContext.setUser(values.data.result);
+            authContext.setUser(values.data.msg);
             navigate("/home")
             toast.success("Logged in successfully");
             toast.info("Welcome to Bookmart")
